@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: #002f58; /* Blue text color */
 }
 
 /* Header Styles */
@@ -61,18 +62,16 @@ nav ul li a:hover {
 }
 
 .banner-content h2 {
-    color: #002f58;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
 .banner-content p {
-    color: #002f58;
     margin-bottom: 30px;
 }
 
 .banner-content .btn {
-    background-color: #1a5a9b; /* Dark blue button color */
+    background-color: #002f58; /* Dark blue button color */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -91,7 +90,6 @@ nav ul li a:hover {
 }
 
 .projects h2 {
-    color: #002f58;
     margin-bottom: 30px;
 }
 
@@ -115,12 +113,7 @@ nav ul li a:hover {
 }
 
 .project-box h3 {
-    color: #002f58;
     margin-bottom: 10px;
-}
-
-.project-box p {
-    color: #002f58;
 }
 
 /* Footer Styles */
@@ -143,7 +136,6 @@ footer {
 }
 
 .about h3, .our-projects h3 {
-    color: #f9f9f9;
     margin-bottom: 20px;
 }
 
@@ -156,7 +148,6 @@ footer {
 }
 
 .about ul li a, .our-projects ul li a {
-    color: #f9f9f9;
     text-decoration: none;
 }
 
@@ -166,9 +157,13 @@ footer {
 
 .copyright {
     text-align: center;
+    background-color: #f9f9f9;
+    color: #002f58;
+    padding: 20px 0;
+    margin-top: 50px; 
 }
 
 .copyright img {
-    height: 30px; /* Adjust height as needed */
+    height: auto; 
     margin-right: 10px;
 }
