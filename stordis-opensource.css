@@ -137,6 +137,10 @@ nav ul li a:hover {
     width: 190px;
     border: solid 1px #dcdcdc;
 }
+
+.box h3{
+    color:#002f58;
+}
 @media screen and (max-width: 768px) {
     .project-box {
         flex: 0 0 calc(50% - 40px); /* Adjust width for smaller screens */
