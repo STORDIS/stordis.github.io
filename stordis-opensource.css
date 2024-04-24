@@ -54,25 +54,42 @@ nav ul li a:hover {
 
 /* Banner Styles */
 .banner {
-    background-image: url('banner-image.jpg'); /* Replace with your banner image */
-    background-size: cover;
-    background-position: center;
+    width: 1920px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding: 100px 0;
+    color: #fff; /* Adjust text color */
 }
 
 .banner-content h2 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color:white;
 }
 
 .banner-content p {
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color:white;
 }
 
 .banner-content .btn {
-    background-color: #002f58; /* Dark blue button color */
-    color: white;
+    background-color: #f9f9f9; /* Dark blue button color */
+    color: #002f58;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -81,7 +98,9 @@ nav ul li a:hover {
 
 .banner-content .btn:hover {
     background-color: #002f58; /* Dark blue hover color */
+    color: white;
 }
+
 
 /* Projects Section Styles */
 .projects {
