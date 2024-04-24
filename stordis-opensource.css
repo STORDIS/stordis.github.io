@@ -93,20 +93,29 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+/* Project Boxes */
 .project-boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .project-box {
-    width: calc(33.33% - 40px); /* Adjust width as needed */
+    flex: 0 0 calc(33.33% - 40px); /* Adjust width as needed */
     margin: 20px;
     padding: 20px;
     border: 1px solid #002f58;
     border-radius: 8px;
     transition: background-color 0.3s;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
+
+@media screen and (max-width: 768px) {
+    .project-box {
+        flex: 0 0 calc(50% - 40px); /* Adjust width for smaller screens */
+    }
+}
+
 
 .project-box:hover {
     background-color: #f9f9f9; /* Light gray hover color */
