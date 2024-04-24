@@ -6,20 +6,26 @@
     <title>STORDIS GmbH</title>
     <link rel="stylesheet" href="stordis-opensource.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/orgs.js"></script>
-    <script src="js/repos.js"></script>
-    <script src="js/loaders.js"></script>
-    <script src="js/data/load_repos.js"></script>
-    <script src="js/data/load_members.js"></script>
-    <script src="js/opensource-site.js"></script>
+    <style>
+        body {
+            color: #002f58;
+        }
+        .copyright {
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .copyright img {
+            margin-right: 20px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <div class="header-container">
         <div class="logo">
-            <!-- Replace 'logo.png' with your actual logo -->
             <img src="https://stordis.com/wp-content/uploads/2023/12/Stordis_Logo_Flatslogan-600ppi-1024x306-1-1.webp" alt="STORDIS GmbH">
         </div>
         <nav>
@@ -45,7 +51,37 @@
 <section class="projects">
     <h2>Our Projects</h2>
     <div class="project-boxes">
-        <!-- Project Boxes will be generated dynamically using JavaScript -->
+        <!-- Static Project Boxes -->
+        <div class="box">
+            <img src="orca_ui_image.jpg" alt="Orca UI">
+            <h3>Orca UI</h3>
+            <button>View Details</button>
+        </div>
+        <div class="box">
+            <img src="orca_backend_image.jpg" alt="Orca Backend">
+            <h3>Orca Backend</h3>
+            <button>View Details</button>
+        </div>
+        <div class="box">
+            <img src="orca_nw_lib_image.jpg" alt="Orca NW Lib">
+            <h3>Orca NW Lib</h3>
+            <button>View Details</button>
+        </div>
+        <div class="box">
+            <img src="bgp_monsoon_demo_image.jpg" alt="Moonson">
+            <h3>Monsoon </h3>
+            <button>View Details</button>
+        </div>
+        <div class="box">
+            <img src="bgp_monsoon_demo_image.jpg" alt="BGP Monsoon Demo">
+            <h3>BGP Monsoon Demo</h3>
+            <button>View Details</button>
+        </div>
+        <div class="box">
+            <img src="dellemc_enterprise_sonic_image.jpg" alt="Dell EMC Enterprise SONiC">
+            <h3>Dell EMC Enterprise SONiC</h3>
+            <button>View Details</button>
+        </div>
     </div>
 </section>
 
@@ -64,12 +100,12 @@
         <div class="our-projects">
             <h3>Our Projects</h3>
             <ul>
-                <li><a href="#">ORCA</a></li>
-                <li><a href="#">MONSOON</a></li>
-                <li><a href="#">Project 3</a></li>
-                <li><a href="#">Project 4</a></li>
-                <li><a href="#">Project 5</a></li>
-                <li><a href="#">Project 6</a></li>
+                <li><a href="#">Orca UI</a></li>
+                <li><a href="#">Orca Backend</a></li>
+                <li><a href="#">Orca NW Lib</a></li>
+                <li><a href="#">Moonson</a></li>
+                <li><a href="#">BGP Monsoon Demo</a></li>
+                <li><a href="#">Dell EMC Enterprise SONiC</a></li>
             </ul>
         </div>
     </div>
