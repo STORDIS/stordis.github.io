@@ -128,7 +128,11 @@ nav ul li a:hover {
     transition: background-color 0.3s;
     box-sizing: border-box; /* Ensure padding is included in width */
 }
-
+.box {
+    width: 33.3333%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 @media screen and (max-width: 768px) {
     .project-box {
         flex: 0 0 calc(50% - 40px); /* Adjust width for smaller screens */
@@ -188,9 +192,10 @@ footer {
 button {
     background-color: #002f58;
     color: white;
-    padding: 11px;
+    padding: 10px;
     border-radius: 6px;
     font-family: Roboto;
+    margin-top:10px;
 }
 button:hover {
     background-color: #f9f9f9;
