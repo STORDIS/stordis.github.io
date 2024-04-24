@@ -27,17 +27,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PQJWJW7L');
 
     </script>
+    <style>
+      /* Box Styles */
+      .nice-box {
+        padding: 20px;
+        border: 1px solid #002f58;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+
+      /* Hover Effect */
+      .nice-box:hover {
+        background-color: #1a5a9b;
+        color: white;
+        border-color: #1a5a9b;
+      }
+    </style>
   </head>
-  <body class="ytype u-text-large">
+  <body class="ytype u-text-large" style="background-color: #002f58;">
     <div id="wrap">
       <div class="main-header main-content-wrap main-header--slim">
         <div class="main-header_wrapper">
           <div class="content-container">
             <div class="arrange arrange--18 arrange--middle main-header_arrange">
               <div class="arrange_unit main-header--full_arrange_unit">
-                <div class="main-header_logo" id="logo">
-                  <a href="https://www.yelp.com/engineering">STORDIS</a>
-                </div>
+                <img src="url_to_your_logo" alt="Your Logo">
               </div>
               <div class="arrange_unit u-nowrap">
                 <h2 class="main-header_title"><span>Engineering</span></h2>
@@ -99,6 +113,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <h2>Open sourced projects</h2>
           <div class="not-featured"></div>
         </div>
+      </div>
+
+      <!-- Orca Box -->
+      <div class="nice-box" id="orca" style="background-color: #002f58;">
+        <h3>Orca</h3>
+        <p>Description of Orca...</p>
+      </div>
+
+      <!-- Monsoon Box -->
+      <div class="nice-box" id="monsoon" style="background-color: #002f58;">
+        <h3>Monsoon</h3>
+        <p>Description of Monsoon...</p>
+      </div>
+
+      <!-- Enterprise SONiC Box -->
+      <div class="nice-box" id="enterprise-sonic" style="background-color: #002f58;">
+        <h3>Enterprise SONiC</h3>
+        <p>Description of Enterprise SONiC...</p>
       </div>
 
       <div class="main-content-wrap main-content-wrap--separated">
