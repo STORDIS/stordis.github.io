@@ -1,250 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>STORDIS &amp; GmbH</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/octicons.css">
-    <link rel="stylesheet" type="text/css" href="css/stordis-opensource.css">
-    <link rel="shortcut icon" href="https://stordis.com/wp-content/uploads/2023/05/cropped-cropped-Stordis_Logo_Flatslogan-600ppi-1024x306-1.webp">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/orgs.js"></script>
-    <script src="js/repos.js"></script>
-    <script src="js/loaders.js"></script>
-    <script src="js/data/load_repos.js"></script>
-    <script src="js/data/load_members.js"></script>
-    <script src="js/opensource-site.js"></script>
-    <script>
-     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORDIS GmbH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-
-})(window,document,'script','dataLayer','GTM-PQJWJW7L');
-
-    </script>
-    <style>
-      /* Box Styles */
-      .nice-box {
-        padding: 20px;
-        border: 1px solid #002f58;
-        border-radius: 8px;
-        transition: background-color 0.3s;
-      }
-
-      /* Hover Effect */
-      .nice-box:hover {
-        background-color: #1a5a9b;
-        color: white;
-        border-color: #1a5a9b;
-      }
-    </style>
-  </head>
-  <body class="ytype u-text-large" style="background-color: #002f58;">
-    <div id="wrap">
-      <div class="main-header main-content-wrap main-header--slim">
-        <div class="main-header_wrapper">
-          <div class="content-container">
-            <div class="arrange arrange--18 arrange--middle main-header_arrange">
-              <div class="arrange_unit main-header--full_arrange_unit">
-                <img src="url_to_your_logo" alt="Your Logo">
-              </div>
-              <div class="arrange_unit u-nowrap">
-                <h2 class="main-header_title"><span>STORDIS GmbH</span></h2>
-              </div>
-              <div class="arrange_unit arrange_unit--fill align-middle main-header--full_arrange_unit main-header_search-container">
-                <div class="main-header_nav u-nowrap responsive-hidden-medium">
-                  <div id="header-nav">
-                    <ul class="header-nav">
-                      <li class="header-nav_item">
-                        <div class="header-nav_link_container">
-                          <a class="header-nav_link" href="https://www.stordis.com">Home</a>
-                        </div>
-                      </li>
-                      <li class="header-nav_item">
-                        <div class="header-nav_link_container">
-                          <a class="header-nav_link" href="https://stordis.com/blog">Blog</a>
-                        </div>
-                      </li>
-                      <li class="header-nav_item">
-                        <div class="header-nav_link_container">
-                          <a class="header-nav_link tabon" href="https://yelp.github.io/">Open Source</a>
-                        </div>
-                      </li>
-                      <li class="header-nav_item">
-                        <div class="header-nav_link_container">
-                          <a class="header-nav_link" href="https://www.yelp.com/engineering/awe">AWE</a>
-                        </div>
-                      </li>
-                      <li class="header-nav_item">
-                        <div class="header-nav_link_container">
-                          <a class="header-nav_link" href="https://www.yelp.com/engineering/whats-it-like">What's it like?</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <!-- Replace 'logo.png' with your actual logo -->
+            <img src="https://stordis.com/wp-content/uploads/2023/12/Stordis_Logo_Flatslogan-600ppi-1024x306-1-1.webp" alt="STORDIS GmbH">
         </div>
-      </div>
-
-      <div class="top-shelf top-shelf-grey">
-        <div class="content-container">
-          <h1>Stordis GmbH</h1>
-          <ul class='bullet-list-round'>
-            <li>Unlock Open Networking solutions with STORDIS</li>
-            <li>Open Networking Platforms for Telecoms</li>
-            <li>Check out <span class='project-count'>0</span> our latest projects from <span class='dev-count'>1</span>our STORDIANS developers</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="y-container y-container--standard-page">
-        <div class="projects y-container_content clearfix">
-          <h2>Popular</h2>
-          <div class="featured"></div>
-
-          <h2>Open sourced projects</h2>
-          <div class="not-featured"></div>
-        </div>
-      </div>
-
-      <!-- Orca Box -->
-      <div class="nice-box" id="orca" style="background-color: #002f58;">
-        <h3>Orca</h3>
-        <p>Description of Orca...</p>
-      </div>
-
-      <!-- Monsoon Box -->
-      <div class="nice-box" id="monsoon" style="background-color: #002f58;">
-        <h3>Monsoon</h3>
-        <p>Description of Monsoon...</p>
-      </div>
-
-      <!-- Enterprise SONiC Box -->
-      <div class="nice-box" id="enterprise-sonic" style="background-color: #002f58;">
-        <h3>Enterprise SONiC</h3>
-        <p>Description of Enterprise SONiC...</p>
-      </div>
-
-      <div class="main-content-wrap main-content-wrap--separated">
-        <div class="content-container">
-          <div class="main-footer">
-            <div class="main-footer_section main-footer_menu arrange arrange--equal arrange--30 arrange--stack-small u-sm-space-b0">
-              <div class="main-footer_item arrange_unit">
-                <div class="footer-menu responsive-hidden-small">
-                  <h3 class="footer-menu_header">About</h3>
-                  <ul class="footer-menu_list">
-                    <li class="footer-menu_item">
-                      <a href="https://www.stordis.com/about-us">About STORDIS</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://stordis.com/about-us/careers">Careers</a>
-                    </li> 
-                    <li class="footer-menu_item">
-                      <a href="https://stordis.com/events-stordis">Events</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://stordis.com/open-networking">Open Networking</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://support.stordis.com/hc/en-us">Support Portal</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://stordis.com/contact">Contact Us</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://stordis.com/legal-notice-impressum">Terms of Service</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://stordis.com/privacy-policy">Privacy Policy</a>
-                    </li>
-                    
-                  </ul>
-                </div>
-              </div>
-              <div class="main-footer_item arrange_unit">
-                <div class="footer-menu responsive-hidden-small">
-                  <h3 class="footer-menu_header">Discover</h3>
-                  <ul class="footer-menu_list">
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp.com/local_yelp">The Local Yelp</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://officialblog.yelp.com/">Yelp Blog</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp-support.com/?l=en_US">Support</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp.com/yelpmobile?source=footer">Yelp Mobile</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp.com/developers?country=US">Developers</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp.com/rss">RSS</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="main-footer_item arrange_unit">
-                <div class="footer-menu responsive-hidden-small">
-                  <h3 class="footer-menu_header">Yelp for Business Owners</h3>
-                  <ul class="footer-menu_list">
-                    <li class="footer-menu_item">
-                      <a href="https://biz.yelp.com/?utm_campaign=claim_business&amp;utm_content=claim_footer_link&amp;utm_medium=www&amp;utm_source=footer">Claim your Business Page</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp.com/advertise">Advertise on Yelp</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelpreservations.com/">Yelp Reservations</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelpwifi.com/">Yelp WiFi</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://biz.yelp.com/support/case_studies">Business Success Stories</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelp-support.com/Yelp_for_Business_Owners?l=en_US">Business Support</a>
-                    </li>
-                    <li class="footer-menu_item">
-                      <a href="https://www.yelpblog.com/section/business">Yelp Blog for Business Owners</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="main-footer_city-landscape-img" role="presentation"></div>
-            <div class="main-footer_mobile-links responsive-visible-small-block hidden-non-responsive-block">
-              <ul class="footer-menu--inline u-text-centered">
-                <li class="footer-menu_item">
-                  <a href="https://www.yelp.com/about">About</a>
-                </li>
-                <li class="footer-menu_item">
-                  <a href="https://officialblog.yelp.com/">Blog</a>
-                </li>
-                <li class="footer-menu_item">
-                  <a href="https://www.yelp-support.com/?l=en_US">Support</a>
-                </li>
-                <li class="footer-menu_item">
-                  <a href="https://www.yelp.com/static?p=tos">Terms</a>
-                </li>
-              </ul>
-            </div>
-            <small class="main-footer_copyright">
-            Copyright © 2024 STORDIS GmbH. All rights reserved.
-            </small>
-          </div>
-        </div>
-      </div>
+        <nav>
+            <ul>
+                <li><a href="https://stordis.com/">Home</a></li>
+                <li><a href="https://stordis.com/about-us">About</a></li>
+                <li><a href="https://github.com/STORDIS">Our Projects</a></li>
+                <li><a href="https://support.stordis.com/hc/en-us">Support Portal</a></li>
+                <li><a href="https://stordis.com/contact/">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-  </body>
+</header>
+
+<section class="banner">
+    <div class="banner-content">
+        <h2>Welcome to STORDIS</h2>
+        <p>Your Open Networking Expert.</p>
+        <a href="https://stordis.com/about-us" class="btn">About Us</a>
+    </div>
+</section>
+
+<section class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-boxes">
+        <!-- Project Boxes will be generated dynamically using JavaScript -->
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="about">
+            <h3>About STORDIS</h3>
+            <ul>
+                 <li><a href="https://stordis.com/">Home</a></li>
+                <li><a href="https://stordis.com/about-us">About</a></li>
+                <li><a href="https://github.com/STORDIS">Our Projects</a></li>
+                <li><a href="https://support.stordis.com/hc/en-us">Support Portal</a></li>
+                <li><a href="https://stordis.com/contact/">Contact</a></li>
+            </ul>
+        </div>
+        <div class="our-projects">
+            <h3>Our Projects</h3>
+            <ul>
+                <li><a href="#">ORCA</a></li>
+                <li><a href="#">MONSOON</a></li>
+                <li><a href="#">Project 3</a></li>
+                <li><a href="#">Project 4</a></li>
+                <li><a href="#">Project 5</a></li>
+                <li><a href="#">Project 6</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <img src="logo.png" alt="Company Logo">
+        <p>&copy; 2024 STORDIS GmbH. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
 </html>
