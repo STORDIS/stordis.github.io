@@ -129,7 +129,7 @@ nav ul li a:hover {
 footer {
     background-color: #002f58;
     color: white;
-    padding: 50px 0;
+    padding-top:50px;
 }
 
 .footer-container {
@@ -138,7 +138,10 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-
+.about ul li a, .our-projects ul li a {
+    text-decoration: none;
+    color: white;
+}
 .about, .our-projects {
     flex: 1;
     margin-right: 50px;
@@ -170,9 +173,10 @@ footer {
     color: #002f58;
     padding: 20px 0;
     margin-top: 50px; 
+    display:block;
 }
 
 .copyright img {
-    height: auto; 
+    height: 50px; 
     margin-right: 10px;
 }
