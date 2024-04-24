@@ -173,9 +173,12 @@ footer {
     color: #002f58;
     padding: 20px 0;
     margin-top: 50px; 
-    display:block;
 }
-
+.copyright {
+  
+    display: block!important;
+    align-items: center;
+}
 .copyright img {
     height: 50px; 
     margin-right: 10px;
