@@ -185,7 +185,20 @@ footer {
 .about ul li a:hover, .our-projects ul li a:hover {
     text-decoration: underline;
 }
-
+button {
+    background-color: #002f58;
+    color: white;
+    padding: 11px;
+    border-radius: 6px;
+    font-family: Roboto;
+}
+button:hover {
+    background-color: #f9f9f9;
+    color: #002f58;
+    padding: 11px;
+    border-radius: 6px;
+    font-family: Roboto;
+}
 .copyright {
     text-align: center;
     background-color: #f9f9f9;
