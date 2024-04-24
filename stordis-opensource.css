@@ -4,7 +4,7 @@ p {
 }
 
 h3 a {
-  color: #c41200;
+  color: #002f58;
 
   /* Some project names are too long :( */
   overflow: hidden;
@@ -27,7 +27,6 @@ h3 a i {
 }
 
 .top-shelf-grey .content-container {
-  background: url(/img/illustration.png) no-repeat right bottom;
   height: 240px;
   width: 960px;
 }
