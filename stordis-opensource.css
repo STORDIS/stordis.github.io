@@ -42,7 +42,7 @@ nav ul li:last-child {
 
 nav ul li a {
     text-decoration: none;
-    color: #00258;
+    color: #002f58;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -61,13 +61,13 @@ nav ul li a:hover {
 }
 
 .banner-content h2 {
-    color: #00258;
+    color: #002f58;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
 .banner-content p {
-    color: #00258;
+    color: #002f58;
     margin-bottom: 30px;
 }
 
@@ -81,7 +81,7 @@ nav ul li a:hover {
 }
 
 .banner-content .btn:hover {
-    background-color: #00258; /* Dark blue hover color */
+    background-color: #002f58; /* Dark blue hover color */
 }
 
 /* Projects Section Styles */
@@ -91,7 +91,7 @@ nav ul li a:hover {
 }
 
 .projects h2 {
-    color: #00258;
+    color: #002f58;
     margin-bottom: 30px;
 }
 
@@ -105,7 +105,7 @@ nav ul li a:hover {
     width: calc(33.33% - 40px); /* Adjust width as needed */
     margin: 20px;
     padding: 20px;
-    border: 1px solid #00258;
+    border: 1px solid #002f58;
     border-radius: 8px;
     transition: background-color 0.3s;
 }
@@ -115,17 +115,17 @@ nav ul li a:hover {
 }
 
 .project-box h3 {
-    color: #00258;
+    color: #002f58;
     margin-bottom: 10px;
 }
 
 .project-box p {
-    color: #00258;
+    color: #002f58;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #00258;
+    background-color: #002f58;
     color: white;
     padding: 50px 0;
 }
