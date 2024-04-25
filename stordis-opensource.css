@@ -233,3 +233,48 @@ button:hover {
     height: 50px; 
     margin-right: 10px;
 }
+/* CSS for mobile devices */
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+    
+    .header-container {
+        flex-direction: column; /* Stack navigation below logo on smaller screens */
+    }
+
+    nav {
+        margin-top: 20px; /* Add space between logo and navigation links */
+    }
+
+    .banner-content {
+        text-align: center; /* Center align banner content */
+    }
+
+    .projects {
+        padding: 20px; /* Add padding to project section */
+    }
+
+    .project-boxes {
+        display: flex;
+        flex-wrap: wrap; /* Allow project boxes to wrap on smaller screens */
+        justify-content: center; /* Center align project boxes */
+    }
+
+    .box {
+        width: 90%; /* Adjust box width for better fit on smaller screens */
+        margin-bottom: 20px; /* Add space between project boxes */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Stack footer sections vertically on smaller screens */
+        text-align: center; /* Center align footer content */
+    }
+
+    .about,
+    .our-projects {
+        margin-bottom: 20px; /* Add space between footer sections */
+    }
+}
