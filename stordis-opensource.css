@@ -267,7 +267,19 @@ button:hover {
         width: 90%; /* Adjust box width for better fit on smaller screens */
         margin-bottom: 20px; /* Add space between project boxes */
     }
-
+    .box h3 {
+    color: #002f58;
+    padding: 10px;
+    font-size: 18px;
+}
+    button:hover {
+    background-color: #f9f9f9;
+    color: #002f58;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: Roboto;
+    font-size: 15px;
+}
     .footer-container {
         flex-direction: column; /* Stack footer sections vertically on smaller screens */
         text-align: center; /* Center align footer content */
@@ -275,6 +287,16 @@ button:hover {
 
     .about,
     .our-projects {
-        margin-bottom: 20px; /* Add space between footer sections */
+        margin-bottom: 20px;
+        margin-right: 0px;
     }
+    .projects h2 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 30px;
+}
+    .about h3, .our-projects h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
 }
