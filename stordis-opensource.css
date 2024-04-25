@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #002f58; /* Blue text color */
+    color: #002f58;
 }
 
 /* Header Styles */
@@ -25,8 +25,7 @@ header {
 }
 
 .logo img {
-    height: 50px; /* Adjust height as needed */
-}
+    height: 50px; 
 
 nav ul {
     list-style: none;
@@ -49,7 +48,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #1a5a9b; /* Dark blue hover color */
+    color: #1a5a9b;
 }
 
 /* Banner Styles */
@@ -72,7 +71,7 @@ nav ul li a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff; /* Adjust text color */
+    color: #fff; 
 }
 
 .banner-content h2 {
@@ -88,7 +87,7 @@ nav ul li a:hover {
 }
 
 .banner-content .btn {
-    background-color: #f9f9f9; /* Dark blue button color */
+    background-color: #f9f9f9;
     color: #002f58;
     padding: 10px 20px;
     border-radius: 5px;
@@ -97,7 +96,7 @@ nav ul li a:hover {
 }
 
 .banner-content .btn:hover {
-    background-color: #002f58; /* Dark blue hover color */
+    background-color: #002f58;
     color: white;
 }
 
@@ -120,13 +119,13 @@ nav ul li a:hover {
 }
 
 .project-box {
-    flex: 0 0 calc(33.33% - 40px); /* Adjust width as needed */
+    flex: 0 0 calc(33.33% - 40px); 
     margin: 20px;
     padding: 20px;
     border: 1px solid #002f58;
     border-radius: 8px;
     transition: background-color 0.3s;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box; 
 }
 .box {
     width: 33.3333%;
@@ -148,13 +147,13 @@ nav ul li a:hover {
 }
 @media screen and (max-width: 768px) {
     .project-box {
-        flex: 0 0 calc(50% - 40px); /* Adjust width for smaller screens */
+        flex: 0 0 calc(50% - 40px); 
     }
 }
 
 
 .project-box:hover {
-    background-color: #f9f9f9; /* Light gray hover color */
+    background-color: #f9f9f9; 
 }
 
 .project-box h3 {
@@ -238,34 +237,33 @@ button:hover {
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
     body {
-        font-size: 14px; /* Adjust font size for better readability */
+        font-size: 14px; 
     }
     
     .header-container {
-        flex-direction: column; /* Stack navigation below logo on smaller screens */
+        flex-direction: column;
     }
 
     nav {
-        margin-top: 20px; /* Add space between logo and navigation links */
+        margin-top: 20px;
     }
 
     .banner-content {
-        text-align: center; /* Center align banner content */
-    }
+        text-align: center;
 
     .projects {
-        padding: 20px; /* Add padding to project section */
+        padding: 20px;
     }
 
     .project-boxes {
         display: flex;
-        flex-wrap: wrap; /* Allow project boxes to wrap on smaller screens */
-        justify-content: center; /* Center align project boxes */
+        flex-wrap: wrap;
+        justify-content: center; 
     }
 
     .box {
-        width: 90%; /* Adjust box width for better fit on smaller screens */
-        margin-bottom: 20px; /* Add space between project boxes */
+        width: 90%;
+        margin-bottom: 20px;
     }
     .box h3 {
     color: #002f58;
@@ -281,8 +279,8 @@ button:hover {
     font-size: 15px;
 }
     .footer-container {
-        flex-direction: column; /* Stack footer sections vertically on smaller screens */
-        text-align: center; /* Center align footer content */
+        flex-direction: column; 
+        text-align: center;
     }
 
     .about,
