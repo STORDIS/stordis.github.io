@@ -297,6 +297,11 @@ button:hover {
         margin-bottom: 20px;
         /* Add space between footer sections */
     }
+    .about,
+.our-projects {
+    flex: unset;
+    margin-right: 0px;
+}
 }
 
 /* Additional styles for copyright section */
