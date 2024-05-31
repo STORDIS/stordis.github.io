@@ -1,0 +1,110 @@
+* {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+}
+
+.banner-content {
+    text-align: center;
+    color: #fff;
+    background-image: url("bg-banner.webp");
+    width: -webkit-fill-available;
+    aspect-ratio: 16/4;
+    object-fit: scale-down;
+    background-repeat: no-repeat;
+}
+
+.banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+    padding-top: 10%;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.center-content {
+    min-height: 50vh !important;
+    width: 100%;
+}
+
+.sideBar {
+    width: 250px !important;
+}
+
+.content {
+    padding: 15px;
+    width: calc(100vw - 280px);
+}
+
+.relative {
+    height: 100vh;
+    position: relative;
+    width: 250px !important;
+}
+
+.fixed {
+    position: fixed;
+    top: 50px;
+    width: 250px !important;
+}
+
+.center-content .relative ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.center-content .sub-link {
+    text-align: start !important;
+    padding: 5px 15px;
+}
+
+.center-content .active {
+    color: blue !important;
+    border-left: 3px solid blue !important;
+}
+
+#readme-content h1 {
+    font-size: 2em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #30363db3;
+}
+
+#readme-content h2 {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #30363db3;
+}
+
+#readme-content img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    object-fit: scale-down;
+}
+
+#readme-content pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    color: #e6edf3;
+    background-color: #161b22;
+    border-radius: 6px;
+}
+
+#readme-content code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+}
