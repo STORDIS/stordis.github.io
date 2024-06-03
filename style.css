@@ -35,8 +35,12 @@
 .center-content {
     min-height: 50vh !important;
     width: 100%;
+}
 
-
+.link {
+    text-decoration: underline;
+    color: #0d6efd !important;
+    cursor: pointer;
 }
 
 .sideBar {
@@ -141,7 +145,6 @@
     height: 50%;
 }
 
-
 /* footer */
 footer {
     background-color: var(--themeBlue);
@@ -151,11 +154,11 @@ footer {
     position: relative;
 }
 
-.github_logo{
+.github_logo {
     border-radius: 50%;
 }
 
-.footer-container  {
+.footer-container {
     background-color: transparent;
 }
 
