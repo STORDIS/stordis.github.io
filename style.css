@@ -136,6 +136,12 @@
     overflow: auto;
 }
 
+.diagram {
+    max-width: 50%;
+    height: 50%;
+}
+
+
 /* footer */
 footer {
     background-color: var(--themeBlue);

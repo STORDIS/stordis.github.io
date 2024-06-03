@@ -26,14 +26,14 @@
                         <h3 class="sidebar-header pb-1">Our Projects</h3>
                         <ul>
                             <li
-                                class="sub-link"
-                                onclick="setActive(this), fetchReadme('STORDIS', '')"
+                                class="sub-link active"
+                                onclick="setActive(this),loadContent(orca_content)"
                             >
                                 ORCA
                             </li>
 
                             <li
-                                class="sub-link ms-3 active"
+                                class="sub-link ms-3 "
                                 onclick="setActive(this), fetchReadme('STORDIS', 'orca_nw_lib')"
                             >
                                 Orca Nw library
@@ -51,10 +51,22 @@
                                 Orca Backend
                             </li>
                             <li
+                                class="sub-link ms-3"
+                                onclick="setActive(this),loadContent(orca_video_content)"
+                            >
+                                ORCA Video Tutorials
+                            </li>
+                            <li
                                 class="sub-link"
                                 onclick="setActive(this), fetchReadme('STORDIS', 'monsoon')"
                             >
                                 Monsoon
+                            </li>
+                            <li
+                                class="sub-link ms-3"
+                                onclick="setActive(this),loadContent(monsoon_video_content)"
+                            >
+                                Monsoon Video Tutorials
                             </li>
                         </ul>
                     </div>
