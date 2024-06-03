@@ -60,7 +60,7 @@ var orca_content = `<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h
 <ul>
 <li> ORCA has following 3 Major components-
 <ul>
-<li> ORCA Network Library</li>
+<li onclick="setActive(this),fetchReadme('STORDIS', 'orca_nw_lib')">ORCA Network Library</li>
 <li>ORCA Backend</li>
 <li>ORCA UI</li>
 </ul>
