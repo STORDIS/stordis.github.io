@@ -1,10 +1,16 @@
+:root {
+    --themeBlue: #002f58;
+    --themeWhite: #f9f9f9;
+
+}
+
 * {
     font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
 }
 
 .banner-content {
     text-align: center;
-    color: #fff;
+    color: var(--themeWhite);
     background-image: url("bg-banner.webp");
     width: -webkit-fill-available;
     aspect-ratio: 16/4;
@@ -15,39 +21,50 @@
 .banner-content h2 {
     font-size: 36px;
     margin-bottom: 10px;
-    color: white;
+    color: var(--themeWhite);
     padding-top: 10%;
+    background-color: transparent;
 }
 
 .banner-content p {
     font-size: 18px;
     margin-bottom: 20px;
-    color: white;
+    color: var(--themeWhite);
+    background-color: transparent;
 }
 
 .center-content {
     min-height: 50vh !important;
     width: 100%;
+
+
 }
 
 .sideBar {
+    margin: 0px 15px;
     width: 250px !important;
+}
+
+.sideBar .sidebar-header {
+    color: var(--themeBlue);
+    border-bottom: 1px solid var(--themeBlue);
+    width: fit-content;
 }
 
 .content {
     padding: 15px;
-    width: calc(100vw - 280px);
+    width: calc(100vw - 295px);
 }
 
 .relative {
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     width: 250px !important;
 }
 
 .fixed {
     position: fixed;
-    top: 50px;
+    top: 25px;
     width: 250px !important;
 }
 
@@ -58,12 +75,15 @@
 
 .center-content .sub-link {
     text-align: start !important;
-    padding: 5px 15px;
+    padding: 5px 0px 5px 15px;
+    cursor: pointer;
 }
 
 .center-content .active {
-    color: blue !important;
-    border-left: 3px solid blue !important;
+    color: var(--themeBlue) !important;
+    border-left: 3px solid var(--themeBlue) !important;
+    background-color: var(--themeWhite);
+    width: 95%;
 }
 
 #readme-content h1 {
@@ -92,7 +112,7 @@
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    color: #e6edf3;
+    color: var(--themeWhite);
     background-color: #161b22;
     border-radius: 6px;
 }
@@ -107,4 +127,45 @@
     word-wrap: normal;
     background-color: transparent;
     border: 0;
+}
+
+#readme table {
+    display: block;
+    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+}
+
+/* footer */
+footer {
+    background-color: var(--themeBlue);
+    color: var(--themeWhite);
+    padding-top: 50px;
+}
+
+.footer-container  {
+    background-color: transparent;
+}
+.footer-container img {
+    height: 30px;
+    background-color: transparent;
+}
+
+.footer-container ul a {
+    color: var(--themeWhite);
+    text-decoration: none;
+}
+
+.footer-container ul a:hover {
+    border-bottom: 1px solid var(--themeWhite);
+}
+
+.copyright {
+    text-align: center;
+    background-color: var(--themeWhite);
+    color: var(--themeBlue);
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 14px;
 }
