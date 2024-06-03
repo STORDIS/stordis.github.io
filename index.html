@@ -27,44 +27,51 @@
                         <ul>
                             <li
                                 class="sub-link active"
-                                onclick="setActive(this),loadContent(orca_content)"
+                                id="orca_content"
+                                onclick="setActive('orca_content'),loadContent(orca_content)"
                             >
                                 ORCA
                             </li>
 
                             <li
-                                class="sub-link ms-3 "
-                                onclick="setActive(this), fetchReadme('STORDIS', 'orca_nw_lib')"
+                                class="sub-link ms-3"
+                                id="orca_nw_lib"
+                                onclick="setActive('orca_nw_lib'), fetchReadme('STORDIS', 'orca_nw_lib')"
                             >
                                 ORCA Network library
                             </li>
                             <li
                                 class="sub-link ms-3"
-                                onclick="setActive(this), fetchReadme('STORDIS', 'orca_ui')"
+                                id="orca_ui"
+                                onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')"
                             >
                                 ORCA UI
                             </li>
                             <li
                                 class="sub-link ms-3"
-                                onclick="setActive(this), fetchReadme('STORDIS', 'orca_backend')"
+                                id="orca_backend"
+                                onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')"
                             >
                                 ORCA Backend
                             </li>
                             <li
                                 class="sub-link ms-3"
-                                onclick="setActive(this),loadContent(orca_video_content)"
+                                id="orca_video_content"
+                                onclick="setActive('orca_video_content'),loadContent(orca_video_content)"
                             >
                                 ORCA Video Tutorials
                             </li>
                             <li
                                 class="sub-link"
-                                onclick="setActive(this), fetchReadme('STORDIS', 'monsoon')"
+                                id="monsoon"
+                                onclick="setActive('monsoon'), fetchReadme('STORDIS', 'monsoon')"
                             >
                                 MONSOON
                             </li>
                             <li
                                 class="sub-link ms-3"
-                                onclick="setActive(this),loadContent(monsoon_video_content)"
+                                id="monsoon_video_content"
+                                onclick="setActive('monsoon_video_content'),loadContent(monsoon_video_content)"
                             >
                                 MONSOON Video Tutorials
                             </li>
@@ -102,7 +109,14 @@
                     </ul>
                 </div>
                 <div class="col-3">
-                    <h3>Repository <img src="github_logo.jfif" class="github_logo" alt=""> </h3>
+                    <h3>
+                        Repository
+                        <img
+                            src="github_logo.jfif"
+                            class="github_logo"
+                            alt=""
+                        />
+                    </h3>
                     <ul>
                         <li>
                             <a href="https://github.com/STORDIS/orca_ui"

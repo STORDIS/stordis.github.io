@@ -1,68 +1,71 @@
 // function to fetch the readme.md from the git hub repository
 
 async function fetchReadme(owner, repo) {
-  const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`;
+    const readmeUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/README.md`;
 
-  // Fetch the README file
-  fetch(readmeUrl)
-    .then((response) => response.text())
-    .then((markdown) => {
-      const html = marked.parse(markdown);
+    // Fetch the README file
+    fetch(readmeUrl)
+        .then((response) => response.text())
+        .then((markdown) => {
+            const html = marked.parse(markdown);
 
-      document.getElementById("readme-content").innerHTML = html;
+            document.getElementById("readme-content").innerHTML = html;
 
-      const images = document.querySelectorAll("#readme-content img");
-      images.forEach((img) => {
-        // If the image source is relative, convert it to an absolute URL
+            const images = document.querySelectorAll("#readme-content img");
+            images.forEach((img) => {
+                // If the image source is relative, convert it to an absolute URL
 
-        let len = img.src.split("/").length;
-        let ary = img.src.split("/");
+                let len = img.src.split("/").length;
+                let ary = img.src.split("/");
 
-        img.src = `https://raw.githubusercontent.com/STORDIS/monsoon/main/${
-          ary[len - 2]
-        }/${ary[len - 1]}`;
-      });
+                img.src = `https://raw.githubusercontent.com/${owner}/${repo}/main/${
+                    ary[len - 2]
+                }/${ary[len - 1]}`;
+            });
 
-      // add bootstrap class to table
-      const tables = document.querySelectorAll("#readme-content table");
-      tables.forEach((table) => {
-        table.classList.add("table");
-        table.classList.add("table-bordered");
-      });
-    })
-    .catch((error) => {});
+            // add bootstrap class to table
+            const tables = document.querySelectorAll("#readme-content table");
+            tables.forEach((table) => {
+                table.classList.add("table");
+                table.classList.add("table-bordered");
+            });
+        })
+        .catch((error) => {});
 }
 
 //fetchReadme("STORDIS", "orca_nw_lib");
 
 // function to make the side bar sticky when the page is scrolled down
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebar = document.getElementById("sidebar");
-  const sidebarTop = sidebar.offsetTop;
+    const sidebar = document.getElementById("sidebar");
+    const sidebarTop = sidebar.offsetTop;
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= sidebarTop) {
-      sidebar.classList.add("fixed");
-    } else {
-      sidebar.classList.remove("fixed");
-    }
-  });
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= sidebarTop) {
+            sidebar.classList.add("fixed");
+        } else {
+            sidebar.classList.remove("fixed");
+        }
+    });
 });
 
 // function to set the link active state
-function setActive(link) {
-  const links = document.querySelectorAll(".sub-link");
-  links.forEach((l) => l.classList.remove("active"));
-  link.classList.add("active");
+function setActive(id) {
+    const links = document.querySelectorAll(".sub-link");
+    links.forEach((l) => l.classList.remove("active"));
+    const link = document.getElementById(id);
+    if (link) {
+        link.classList.add("active");
+    }
 }
 
 var orca_content = `<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h1>
 <ul>
 <li> ORCA has following 3 Major components-
 <ul>
-<li onclick="setActive(this),fetchReadme('STORDIS', 'orca_nw_lib')">ORCA Network Library</li>
-<li>ORCA Backend</li>
-<li>ORCA UI</li>
+<li class="link" id="orca_nw_lib" onclick="setActive('orca_nw_lib'),fetchReadme('STORDIS', 'orca_nw_lib')" >ORCA Network Library</li>
+<li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')" >ORCA Backend</li>
+<li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')" >ORCA UI</li>
 </ul>
 </li>
 <li>Network Topology maintained Neo4j graph database.</li>
@@ -90,9 +93,9 @@ var orca_content = `<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h
 
 </ul>
 <h3> ORCA Architecture </h3>
-<img class=diagram src=orca_design.jpg alt="Orca Design"></img>
+<img class="diagram" src=orca_design.jpg alt="Orca Design"></img>
 <h2>ORCASK - AI Enabled chatbot for SONiC configuration</h2>
-<img class=diagram src=orcask.jpg alt="Orca Design"></img>`;
+<img class="diagram" src=orcask.jpg alt="Orca Design"></img>`;
 
 var orca_video_content = `
 <h2>ORCA Video Tutorials</h2>
@@ -107,8 +110,8 @@ var monsoon_video_content = `
 `;
 
 function loadContent(htmlContent) {
-  const contentContainer = document.getElementById("readme-content");
-  contentContainer.innerHTML = htmlContent;
+    const contentContainer = document.getElementById("readme-content");
+    contentContainer.innerHTML = htmlContent;
 }
 
 loadContent(orca_content);
