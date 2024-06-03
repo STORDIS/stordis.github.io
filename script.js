@@ -67,22 +67,32 @@ var orca_content = `<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h
 </li>
 <li>Network Topology maintained Neo4j graph database.</li>
 <li>Realtime updates in DB using gNMI subscriptions.</li>
+<li>ORCA can discover and configure -
+<ul>
+<li>Interfaces</li>
+<li>LLDP Neighbor Links</li>
+<li>Port Groups</li>
+<li>MCLAG with peer links</li>
+<li>BGP and Neighbor links</li>
+<li>VLAN</li>
+</li>
 </ul>
+<h3> ORCA Architecture </h3>
 <img class=diagram src=orca_design.jpg alt="Orca Design"></img>
 <h2>ORCASK - AI Enbled chatbot for SONiC configuration</h2>
 <img class=diagram src=orcask.jpg alt="Orca Design"></img>`;
 
-var orca_video_content=`
+var orca_video_content = `
 <h2>ORCA Video Tutorials</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/t38xiw1rfUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5aMdCqaim7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-`
+`;
 
-var monsoon_video_content=`
+var monsoon_video_content = `
 <h2>ORCA Video Tutorials</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T1hULsw59n0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VG8nhtzPtj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-`
+`;
 
 function loadContent(htmlContent) {
   const contentContainer = document.getElementById("readme-content");
