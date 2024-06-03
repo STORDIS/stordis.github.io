@@ -1,7 +1,6 @@
 :root {
     --themeBlue: #002f58;
     --themeWhite: #f9f9f9;
-
 }
 
 * {
@@ -13,7 +12,7 @@
     color: var(--themeWhite);
     background-image: url("bg-banner.webp");
     width: -webkit-fill-available;
-    aspect-ratio: 16/4;
+    aspect-ratio: 16/2;
     object-fit: scale-down;
     background-repeat: no-repeat;
 }
@@ -22,7 +21,7 @@
     font-size: 36px;
     margin-bottom: 10px;
     color: var(--themeWhite);
-    padding-top: 10%;
+    padding-top: 3.5%;
     background-color: transparent;
 }
 
@@ -142,11 +141,18 @@ footer {
     background-color: var(--themeBlue);
     color: var(--themeWhite);
     padding-top: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.github_logo{
+    border-radius: 50%;
 }
 
 .footer-container  {
     background-color: transparent;
 }
+
 .footer-container img {
     height: 30px;
     background-color: transparent;
