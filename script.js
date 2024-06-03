@@ -93,9 +93,9 @@ var orca_content = `<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h
 
 </ul>
 <h3> ORCA Architecture </h3>
-<img class=diagram src=orca_design.jpg alt="Orca Design"></img>
+<img class="diagram" src=orca_design.jpg alt="Orca Design"></img>
 <h2>ORCASK - AI Enabled chatbot for SONiC configuration</h2>
-<img class=diagram src=orcask.jpg alt="Orca Design"></img>`;
+<img class="diagram" src=orcask.jpg alt="Orca Design"></img>`;
 
 var orca_video_content = `
 <h2>ORCA Video Tutorials</h2>
