@@ -75,11 +75,23 @@ var orca_content = `<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h
 <li>MCLAG with peer links</li>
 <li>BGP and Neighbor links</li>
 <li>VLAN</li>
+</ul>
 </li>
+
+
+<li>Live Demo -
+<ul>
+<li><a href="http://orca.stordis.com:8880/">ORCA</a></li>
+<li><a href="http://orcadb.stordis.com:8881/">ORCA Topology Database</a></li>
+</ul>
+</li>
+
+
+
 </ul>
 <h3> ORCA Architecture </h3>
 <img class=diagram src=orca_design.jpg alt="Orca Design"></img>
-<h2>ORCASK - AI Enbled chatbot for SONiC configuration</h2>
+<h2>ORCASK - AI Enabled chatbot for SONiC configuration</h2>
 <img class=diagram src=orcask.jpg alt="Orca Design"></img>`;
 
 var orca_video_content = `
