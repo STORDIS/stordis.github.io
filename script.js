@@ -15,12 +15,21 @@ async function fetchReadme(owner, repo) {
             images.forEach((img) => {
                 // If the image source is relative, convert it to an absolute URL
 
+                console.log(img.src);
+
                 let len = img.src.split("/").length;
                 let ary = img.src.split("/");
 
-                img.src = `https://raw.githubusercontent.com/${owner}/${repo}/main/${
-                    ary[len - 2]
-                }/${ary[len - 1]}`;
+                if (
+                    ary[len - 1].includes(".jpg") ||
+                    ary[len - 1].includes(".png")
+                ) {
+                    img.src = `https://raw.githubusercontent.com/${owner}/${repo}/main/${
+                        ary[len - 2]
+                    }/${ary[len - 1]}`;
+                }else{
+                    img.style.width = 'auto';
+                }
             });
 
             // add bootstrap class to table
