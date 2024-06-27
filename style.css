@@ -185,7 +185,7 @@ footer {
     font-size: 14px;
 }
 .copyright img {
-    width: 150px;
+    width: 150px!important;
     height: auto;
     margin-bottom: 20px;
 }
