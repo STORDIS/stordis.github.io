@@ -184,3 +184,8 @@ footer {
     margin-top: 50px;
     font-size: 14px;
 }
+.copyright img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
