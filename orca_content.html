@@ -1,0 +1,40 @@
+<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h1>
+<ul>
+    <li> ORCA has following 3 Major components-
+        <ul>
+            <li class="link" id="orca_nw_lib" onclick="setActive('orca_nw_lib'),fetchReadme('STORDIS', 'orca_nw_lib')">
+                ORCA Network Library</li>
+            <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">ORCA Backend
+            </li>
+            <li class="link" id="orca_backend"
+                onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">ORCA UI</li>
+        </ul>
+    </li>
+    <li>Network Topology maintained Neo4j graph database.</li>
+    <li>Realtime updates in DB using gNMI subscriptions.</li>
+    <li>ORCA can discover and configure -
+        <ul>
+            <li>Interfaces</li>
+            <li>LLDP Neighbor Links</li>
+            <li>Port Groups</li>
+            <li>MCLAG with peer links</li>
+            <li>BGP and Neighbor links</li>
+            <li>VLAN</li>
+        </ul>
+    </li>
+
+
+    <li>Live Demo -
+        <ul>
+            <li><a href="http://orca.stordis.com:8880/">ORCA</a></li>
+            <li><a href="http://orcadb.stordis.com:8881/">ORCA Topology Database</a></li>
+        </ul>
+    </li>
+
+
+
+</ul>
+<h3> ORCA Architecture </h3>
+<img class="diagram" src=orca_design.jpg alt="Orca Design"></img>
+<h2>ORCASK - AI Enabled chatbot for SONiC configuration</h2>
+<img class="diagram" src=orcask.jpg alt="Orca Design"></img>
