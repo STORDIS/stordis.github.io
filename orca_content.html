@@ -1,40 +1,88 @@
-<h1>ORCA - An OpenSource Orchestration Solution for SONiC</h1>
+<h2>ORCA - An OpenSource Orchestration Solution for SONiC</h2>
 <ul>
-    <li> ORCA has following 3 Major components-
+    <li>
+        <h4> ORCA Architecture</h4>
+        <h5>ORCA has following components-</h5>
         <ul>
             <li class="link" id="orca_nw_lib" onclick="setActive('orca_nw_lib'),fetchReadme('STORDIS', 'orca_nw_lib')">
-                ORCA Network Library</li>
-            <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">ORCA Backend
+                ORCA Network Library - South bound gNMI interface to SONiC Devices.
             </li>
-            <li class="link" id="orca_backend"
-                onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">ORCA UI</li>
+            <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">
+                ORCA Backend - Django based REST wrapper for ORCA Network Library.
+            </li>
+            <li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">
+                ORCA UI - GUI created usign REST APIs provided by ORCA Backend.
+            </li>
+            <li> ORCASK - AI Enabled chatbot for SONiC configuration</li>
+            <br>
         </ul>
+        <h5>ORCA High Level Design</h5>
+        <img class="diagram" src="orca_design.jpg" alt="Orca Design"></img>
+        <h5>ORCASK - AI Enabled chatbot for SONiC configuration</h5>
+        <p>
+            ORCA has AI enabled chatbot called ORCASK, ORCASK converts user queries to ORCA API calls.
+            ORCASK currently can be configured to use 2 LLMs - GPT and Llama. GPT models can only be used in cloud, Llama on the other hand
+            can be locally hosted.
+        </p>
+        <img class="diagram" src="orcask.jpg" alt="Orca Design"></img>
     </li>
-    <li>Network Topology maintained Neo4j graph database.</li>
-    <li>Realtime updates in DB using gNMI subscriptions.</li>
-    <li>ORCA can discover and configure -
+    <li>
+        ORCA Features -
         <ul>
-            <li>Interfaces</li>
-            <li>LLDP Neighbor Links</li>
-            <li>Port Groups</li>
-            <li>MCLAG with peer links</li>
-            <li>BGP and Neighbor links</li>
-            <li>VLAN</li>
+            <li>
+                Network Discovery -
+                <p>
+                    ORCA Discovers the network topology using LLDP Neighbor Links. 
+                    User can provide management IP address of one of the device in the network. 
+                    Using a single IP address, ORCA identifies LLDP neighbors of the seed device then neighbors of neighbor and so on
+                    until ORCA discovers the network topology of the all connected devices.
+                    Discovery can also be triggered by providing the network address.
+                    In the graphical representation device is the parent node and all its components and network configuration is the child node, connected with 
+                    a specific relationship.
+                </p>
+                <p> What ORCA discovers-</p>
+                <ul>
+                    <li>Device Details</li>
+                    <li>Device Interfaces.</li>
+                    <li>LLDP Neighbor Links</li>
+                    <li>Port Groups</li>
+                    <li>MCLAG with peer links</li>
+                    <li>BGP and Neighbor links</li>
+                    <li>VLAN</li>
+                    <li>Port Channels</li>
+                </ul>
+            </li>
+            </br>
+            <li>
+                Neo4j Topology Database -
+                <p>
+                    ORCA stores the network topology in Neo4j graph database (community edition). Where the neo4j nodes in the database represents 
+                        device components and network configurations and neo4j relationships represents the links between them.
+                        ORCA updates the topology in the database using gNMI subscriptions and for some configuration doing rediscovery of 
+                        specific device components.
+                </p>
+            </li>
+            <li>
+                Device Configuration -
+                <p>ORCA uses gNMI to configure the network topology. Using ORCA following configurations can be done.</p>
+                <ul>
+                    <li>Interfaces</li>
+                    <li>Port Groups</li>
+                    <li>MCLAG</li>
+                    <li>BGP</li>
+                    <li>VLAN</li>
+                    <li>Port Channels</li>
+                </ul>
+            </li>
         </ul>
-    </li>
-
-
-    <li>Live Demo -
-        <ul>
-            <li><a href="http://orca.stordis.com:8880/">ORCA</a></li>
-            <li><a href="http://orcadb.stordis.com:8881/">ORCA Topology Database</a></li>
-        </ul>
-    </li>
-
-
-
-</ul>
-<h3> ORCA Architecture </h3>
-<img class="diagram" src=orca_design.jpg alt="Orca Design"></img>
-<h2>ORCASK - AI Enabled chatbot for SONiC configuration</h2>
-<img class="diagram" src=orcask.jpg alt="Orca Design"></img>
+        <li>
+            Live Demo -
+            <ul>
+                <li>
+                    <a href="http://orca.stordis.com:8880/">ORCA</a>
+                </li>
+                <li>
+                    <a href="http://orcadb.stordis.com:8881/">ORCA Topology Database</a>
+                </li>
+            </ul>
+        </li>
