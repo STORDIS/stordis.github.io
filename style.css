@@ -8,13 +8,15 @@
 }
 
 .banner-content {
-    text-align: center;
     color: var(--themeWhite);
     background-image: url("bg-banner.webp");
     width: -webkit-fill-available;
-    aspect-ratio: 16/2;
+    aspect-ratio: 16/1;
+    text-align: center;
     object-fit: scale-down;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column ;
 }
 
 .banner-content h2 {
