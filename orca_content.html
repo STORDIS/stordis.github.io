@@ -1,5 +1,27 @@
 <h2>ORCA - An OpenSource Orchestration Solution for SONiC</h2>
+<p>
+    ORCA is an open-source orchestration solution for SONiC. It provides a user-friendly interface for managing and configuring SONiC devices.
+    ORCA is built on top of gNMI and uses a Neo4j graph database to store network topology.
+    ORCA is designed to be scalable and extensible, and it can be used to manage large and complex SONiC networks.
+    It is easy to install and use, and it provides a comprehensive set of features for managing SONiC devices.
+    ORCA is a valuable resource for the SONiC community. It is an Open Source project that is constantly being improved and expanded.
+</p>
 <ul>
+    <li>
+        <h4> ORCA Quick Start</h4>
+        <p>
+            ORCA (backend and UI) can be installed within couple of minutes. All is needed is to start 3 docker containers. Refer quick start sections at following links :
+            <ul>
+                <li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">
+                    Run Neo4j and orca_backend docker containers.
+                </li>
+                <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">
+                    Run orca_ui docker container.
+                </li>
+                <br>
+            </ul>
+        </p>
+    </li>
     <li>
         <h4> ORCA Architecture</h4>
         <h5>ORCA has following components-</h5>
@@ -7,10 +29,10 @@
             <li class="link" id="orca_nw_lib" onclick="setActive('orca_nw_lib'),fetchReadme('STORDIS', 'orca_nw_lib')">
                 ORCA Network Library - South bound gNMI interface to SONiC Devices.
             </li>
-            <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">
+            <li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">
                 ORCA Backend - Django based REST wrapper for ORCA Network Library.
             </li>
-            <li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">
+            <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">
                 ORCA UI - GUI created usign REST APIs provided by ORCA Backend.
             </li>
             <li> ORCASK - AI Enabled chatbot for SONiC configuration</li>
@@ -27,7 +49,7 @@
         <img class="diagram" src="orcask.jpg" alt="Orca Design"></img>
     </li>
     <li>
-        ORCA Features -
+        <h4>ORCA Features</h4>
         <ul>
             <li>
                 Network Discovery -
@@ -76,7 +98,7 @@
             </li>
         </ul>
         <li>
-            Live Demo -
+            <h4> Demo</h4>
             <ul>
                 <li>
                     <a href="http://orca.stordis.com:8880/">ORCA</a>
