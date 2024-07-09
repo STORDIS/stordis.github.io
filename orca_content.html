@@ -24,29 +24,37 @@
     </li>
     <li>
         <h4> ORCA Architecture</h4>
-        <h5>ORCA has following components-</h5>
         <ul>
-            <li class="link" id="orca_nw_lib" onclick="setActive('orca_nw_lib'),fetchReadme('STORDIS', 'orca_nw_lib')">
-                ORCA Network Library - South bound gNMI interface to SONiC Devices.
+            <li>
+                <h5>ORCA has following components-</h5>
             </li>
-            <li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">
-                ORCA Backend - Django based REST wrapper for ORCA Network Library.
+            <ul>
+                <li class="link" id="orca_nw_lib" onclick="setActive('orca_nw_lib'),fetchReadme('STORDIS', 'orca_nw_lib')">
+                    ORCA Network Library - South bound gNMI interface to SONiC Devices.
+                </li>
+                <li class="link" id="orca_backend" onclick="setActive('orca_backend'), fetchReadme('STORDIS', 'orca_backend')">
+                    ORCA Backend - Django based REST wrapper for ORCA Network Library.
+                </li>
+                <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">
+                    ORCA UI - GUI created usign REST APIs provided by ORCA Backend.
+                </li>
+                <li> ORCASK - AI Enabled chatbot for SONiC configuration</li>
+                <br>
+            </ul>
+            <li>
+                <h5>ORCA High Level Design</h5>
             </li>
-            <li class="link" id="orca_ui" onclick="setActive('orca_ui'), fetchReadme('STORDIS', 'orca_ui')">
-                ORCA UI - GUI created usign REST APIs provided by ORCA Backend.
+            <img class="diagram" src="orca_design.jpg" alt="Orca Design"></img>
+            <li>
+                <h5>ORCASK - AI Enabled chatbot for SONiC configuration</h5>
             </li>
-            <li> ORCASK - AI Enabled chatbot for SONiC configuration</li>
-            <br>
-        </ul>
-        <h5>ORCA High Level Design</h5>
-        <img class="diagram" src="orca_design.jpg" alt="Orca Design"></img>
-        <h5>ORCASK - AI Enabled chatbot for SONiC configuration</h5>
-        <p>
-            ORCA has AI enabled chatbot called ORCASK, ORCASK converts user queries to ORCA API calls.
+            <p>
+                ORCA has AI enabled chatbot called ORCASK, ORCASK converts user queries to ORCA API calls.
             ORCASK currently can be configured to use 2 LLMs - GPT and Llama. GPT models can only be used in cloud, Llama on the other hand
             can be locally hosted.
-        </p>
-        <img class="diagram" src="orcask.jpg" alt="Orca Design"></img>
+            </p>
+            <img class="diagram" src="orcask.jpg" alt="Orca Design"></img>
+        </ul>
     </li>
     <li>
         <h4>ORCA Features</h4>
