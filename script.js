@@ -15,8 +15,6 @@ async function fetchReadme(owner, repo) {
             images.forEach((img) => {
                 // If the image source is relative, convert it to an absolute URL
 
-                console.log(img.src);
-
                 let len = img.src.split("/").length;
                 let ary = img.src.split("/");
 
@@ -68,6 +66,16 @@ function setActive(id) {
     const link = document.getElementById(id);
     if (link) {
         link.classList.add("active");
+    }
+
+    let valid_ids = ["orca_video_content", "monsoon", "monsoon_video_content"];
+
+    if (valid_ids.includes(active_id)) {
+        document.getElementById("pdf_button").classList.add("d-none");
+        document.getElementById("dox_button").classList.add("d-none");
+    } else {
+        document.getElementById("pdf_button").classList.remove("d-none");
+        document.getElementById("dox_button").classList.remove("d-none");
     }
 }
 
@@ -124,8 +132,6 @@ function downloadHtmlAsDocx() {
         document.getElementById("readme-content").innerHTML +
         postHtml;
 
-    console.log(html);
-
     var blob = new Blob(["\ufeff", html], {
         type: "application/msword",
     });
@@ -151,4 +157,19 @@ function downloadHtmlAsDocx() {
     }
 
     document.body.removeChild(downloadLink);
+}
+
+function downloadPDF() {
+    var content = document.getElementById("readme-content");
+
+    var options = {
+        margin: [0.5, 0.5, 0.5, 0.5], // top, left, bottom, right margins
+        filename: `${active_id}.pdf`,
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 3 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+    };
+
+    html2pdf().set(options).from(content).save();
 }
