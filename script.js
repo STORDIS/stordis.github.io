@@ -160,7 +160,9 @@ function downloadHtmlAsDocx() {
 }
 
 function downloadPDF() {
-    var content = document.getElementById("readme-content");
+    var content = document.getElementById("readme-content").innerHTML;
+
+    content = replaceImageURLs(content);
 
     var options = {
         margin: [0.5, 0.5, 0.5, 0.5], // top, left, bottom, right margins
@@ -172,4 +174,29 @@ function downloadPDF() {
     };
 
     html2pdf().set(options).from(content).save();
+}
+
+function replaceImageURLs(htmlContent) {
+    // Create a new DOM parser
+    const parser = new DOMParser();
+    // Parse the HTML content
+    const doc = parser.parseFromString(htmlContent, "text/html");
+    // Define the URL part to be removed
+    const urlToRemove =
+        "https://raw.githubusercontent.com/STORDIS/stordis.github.io/main/";
+
+    // Find all image elements
+    const images = doc.querySelectorAll("img");
+    images.forEach((img) => {
+        // Get the current src attribute
+        const src = img.getAttribute("src");
+        // Replace the URL part if it exists in the src
+        if (src && src.includes(urlToRemove)) {
+            img.setAttribute("src", src.replace(urlToRemove, ""));
+        }
+    });
+
+    // Serialize the modified HTML back to a string
+    const updatedHTML = new XMLSerializer().serializeToString(doc);
+    return updatedHTML;
 }
