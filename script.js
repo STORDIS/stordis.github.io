@@ -68,7 +68,7 @@ function setActive(id) {
         link.classList.add("active");
     }
 
-    let valid_ids = ["orca_video_content", "monsoon", "monsoon_video_content"];
+    let valid_ids = ["orca_video_content", "monsoon_video_content"]; // id's add in this array will not be shown with buttons
 
     if (valid_ids.includes(active_id)) {
         document.getElementById("pdf_button").classList.add("d-none");
@@ -168,7 +168,7 @@ function downloadPDF() {
         margin: [0.5, 0.5, 0.5, 0.5], // top, left, bottom, right margins
         filename: `${active_id}.pdf`,
         image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 3 },
+        html2canvas: { scale: 2 },
         jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
         pagebreak: { mode: ["avoid-all", "css", "legacy"] },
     };
@@ -177,26 +177,19 @@ function downloadPDF() {
 }
 
 function replaceImageURLs(htmlContent) {
-    // Create a new DOM parser
     const parser = new DOMParser();
-    // Parse the HTML content
     const doc = parser.parseFromString(htmlContent, "text/html");
-    // Define the URL part to be removed
     const urlToRemove =
         "https://raw.githubusercontent.com/STORDIS/stordis.github.io/main/";
 
-    // Find all image elements
     const images = doc.querySelectorAll("img");
     images.forEach((img) => {
-        // Get the current src attribute
         const src = img.getAttribute("src");
-        // Replace the URL part if it exists in the src
         if (src && src.includes(urlToRemove)) {
             img.setAttribute("src", src.replace(urlToRemove, ""));
         }
     });
 
-    // Serialize the modified HTML back to a string
     const updatedHTML = new XMLSerializer().serializeToString(doc);
     return updatedHTML;
 }
