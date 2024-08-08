@@ -25,6 +25,9 @@ async function fetchReadme(owner, repo) {
                     img.src = `https://raw.githubusercontent.com/${owner}/${repo}/main/${
                         ary[len - 2]
                     }/${ary[len - 1]}`;
+
+                    img.setAttribute("width", "500");
+                    img.setAttribute("height", "500");
                 } else {
                     img.style.width = "auto";
                 }
