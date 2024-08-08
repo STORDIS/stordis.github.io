@@ -27,7 +27,7 @@ async function fetchReadme(owner, repo) {
                     }/${ary[len - 1]}`;
 
                     img.setAttribute("width", "500");
-                    img.setAttribute("height", "450");
+                    img.setAttribute("height", "325");
                 } else {
                     img.style.width = "auto";
                 }
